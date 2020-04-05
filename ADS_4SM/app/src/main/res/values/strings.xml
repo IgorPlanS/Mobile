@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Zenith_App</string>
+    <string name="str_Msglogin">Bem Vindo! Faça aqui seu login:</string>
+    <string name="str_login">Usuário: </string>
+    <string name="str_password">Senha: </string>
+    <string name="str_botao_login">LOGIN</string>
+    <string name="str_botao_lembrar_login">DESEJO LEMBRAR</string>
+    <string name="str_erro_login">Usuário ou senha incorretos</string>
+    <string name="str_vazia"></string>
+    <string name="str_TenhoInteresse">Tenho Interesse</string>
+    <string name="str_FaleConosco">Fale Conosco</string>
+    <string name="str_Agendamentos">Agendamentos</string>
+    <string name="str_Clientes">Clientes</string>
+</resources>

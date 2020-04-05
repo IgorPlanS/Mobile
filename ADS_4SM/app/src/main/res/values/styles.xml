@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/soaresMid</item>
+        <item name="colorPrimaryDark">@color/soaresHard</item>
+        <item name="colorAccent">@color/soaresClean</item>
+        <item name="android:textColorPrimary">@color/Black</item>
+    </style>
+
+    <style name="AppTheme.Toolbar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.BotaoPrincipal" parent="AppTheme">
+        <item name="colorPrimary">@color/soares_Amarelo</item>
+    </style>
+
+</resources>

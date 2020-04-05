@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="soaresClean">#79c43a</color>
+    <color name="soaresMid">#3eb444</color>
+    <color name="soaresHard">#2b5d22</color>
+    <color name="soaresBackground">#CBEAC6</color>
+    <color name="alertRed">#980000</color>
+    <color name="Black">#000000</color>
+    <color name="White">#FFFFFF</color>
+    <color name="soares_Amarelo">#f2c811</color>
+    <color name="soares_Preto">#212121</color>
+</resources>

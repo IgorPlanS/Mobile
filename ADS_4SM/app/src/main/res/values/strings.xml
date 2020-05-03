@@ -11,4 +11,6 @@
     <string name="str_FaleConosco">Fale Conosco</string>
     <string name="str_Agendamentos">Agendamentos</string>
     <string name="str_Clientes">Clientes</string>
+    <string name="nav_open">Abrir</string>
+    <string name="nav_close">Fechar</string>
 </resources>

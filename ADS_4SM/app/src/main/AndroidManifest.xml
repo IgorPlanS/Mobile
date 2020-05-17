@@ -2,18 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.impacta_zenith_app">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
+        android:name=".LMSApplication"
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Cadastro"></activity>
-        <activity android:name=".Configuracoes" />
-        <activity android:name=".Agendamentos" />
-        <activity android:name=".TenhoInteresse" />
-        <activity android:name=".FaleConosco" />
+        <activity android:name=".LocalizacoesActivity"></activity>
+        <activity android:name=".CadastroActivity" />
+        <activity android:name=".ConfiguracoesActivity" />
+        <activity android:name=".AgendamentosActivity" />
+        <activity android:name=".TenhoInteresseActivity" />
+        <activity android:name=".FaleConoscoActivity" />
         <activity android:name=".TenhoInteresseActivity" />
         <activity
             android:name=".TelaInicialActivity"

@@ -4,6 +4,7 @@
     <string name="str_login">Usuário: </string>
     <string name="str_password">Senha: </string>
     <string name="str_botao_login">LOGIN</string>
+    <string name="str_botao_cadastro">CADASTRAR USER</string>
     <string name="str_botao_lembrar_login">DESEJO LEMBRAR</string>
     <string name="str_erro_login">Usuário ou senha incorretos</string>
     <string name="str_vazia"></string>
@@ -11,4 +12,6 @@
     <string name="str_FaleConosco">Fale Conosco</string>
     <string name="str_Agendamentos">Agendamentos</string>
     <string name="str_Clientes">Clientes</string>
+    <string name="nav_open">Abrir</string>
+    <string name="nav_close">Fechar</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.impacta_zenith_app
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -13,10 +14,13 @@ import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.activity_fale_conosco.*
 import kotlinx.android.synthetic.main.menu_lateral_cabecalho.*
 
 
 class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+    private val context: Context get() = this
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,16 +43,20 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
         Toast.makeText(this, "Bem vindo $Usuario", Toast.LENGTH_LONG).show()
         mensagem_BemVindo.setText("Bem vindo $Usuario")
 
+
         botao_FaleConosco.setOnClickListener {
             val intent = Intent(this, FaleConoscoActivity::class.java)
+            enviaNotificacaoFaleConosco(FaleConosco())
             startActivity(intent)
         }
         botao_TenhoInteresse.setOnClickListener {
             val intent = Intent(this, TenhoInteresseActivity::class.java)
+            enviaNotificacaoTenhoInteresse(TenhoInteresse())
             startActivity(intent)
         }
         botao_Agendamentos.setOnClickListener {
             val intent = Intent(this, AgendamentosActivity::class.java)
+            enviaNotificacaoAgendamento(Agendamento())
             startActivity(intent)
         }
 
@@ -73,6 +81,24 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
             }
         })
         return true
+    }
+
+    fun enviaNotificacaoFaleConosco(falecosco: FaleConosco){
+        val intent = Intent(this, FaleConoscoActivity:: class.java)
+        intent.putExtra("faleconosco",falecosco.cliente)
+        NotificationUtil.create(this, 1, intent, "Notificação Fale Conosco", "Você tem uma nova mensagem!")
+    }
+
+    fun enviaNotificacaoTenhoInteresse(tenhoInteresse: TenhoInteresse){
+        val intent = Intent(this, TenhoInteresseActivity:: class.java)
+        intent.putExtra("tenhointeresse",tenhoInteresse.cliente)
+        NotificationUtil.create(this, 1, intent, "Notificação Tenho Interesse", "Você tem uma nova mensagem!")
+    }
+
+    fun enviaNotificacaoAgendamento(agendamento: Agendamento){
+        val intent = Intent(this, AgendamentosActivity:: class.java)
+        intent.putExtra("agendamento",agendamento.cliente)
+        NotificationUtil.create(this, 1, intent, "Notificação Agendamento", "Você tem uma nova data agendada!")
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -123,11 +149,12 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
             R.id.nav_chat -> {
                 Toast.makeText(this, "Clicou em chat", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, FaleConoscoActivity::class.java)
+                enviaNotificacaoFaleConosco(FaleConosco())
                 startActivity(intent)
             }
             R.id.nav_localizacao -> {
                 Toast.makeText(this, "Clicou em localizações", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, LocalizacoesActivity::class.java)
+                val intent = Intent(this, MapasActivity::class.java)
                 startActivity(intent)
             }
             R.id.nav_configuracoes -> {
